@@ -18,4 +18,8 @@ app.post('/bye', (request, response) => {
 
 app.get('/bye', (request, response) => response.send({data: 'Bye!'}));
 
+
+const publicApi = require("./router/publicRouterApi")
+app.use("/ublic-api", publicApi);
+
 app.listen(port, () => console.log(`Example app listening on port ${port}!`));
